@@ -18,11 +18,18 @@ namespace AdventureGame
             CurrentLocation = currentLocation;
         }
 
-        public void Moveto(Player player)
+        public string Moveto(Player player)
         {
-            int selection = Convert.ToInt32(Console.ReadLine())-1;
-            player.CurrentLocation = player.CurrentLocation.SurroundingLocations[selection];
-
+            try
+            {
+                int selection = Convert.ToInt32(Console.ReadLine()) - 1;
+                player.CurrentLocation = player.CurrentLocation.SurroundingLocations[selection];
+                return "";
+            }
+            catch
+            {
+                return "That is not a valid option please try again.";
+            }
             
         }
     }
