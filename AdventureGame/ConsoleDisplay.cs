@@ -47,7 +47,7 @@ namespace AdventureGame
                 + SurroundingLocationsToString;
 
             Console.WriteLine(ConsoleScreen);
-            player
+            player.Moveto(player);
             
         }
     }
