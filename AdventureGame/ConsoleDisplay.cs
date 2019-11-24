@@ -23,10 +23,12 @@ namespace AdventureGame
         {
             Console.Clear();
             int count = 1;
-            PlayerStats ="Player Name:"+ player.Name
+            PlayerStats = "Player Name:" + player.Name + "\t\t Current Gold:" + player.Gold
                 + Environment.NewLine
-                +Environment.NewLine
-                +"Current Location:"+ player.CurrentLocation.Name;
+                + Environment.NewLine
+                + "Current Location:" + player.CurrentLocation.Name
+                + "\t\t"
+                + player.CurrentLocation.Description;
 
             SurroundingLocationsToString = "Please select another destination to travel to:" + Environment.NewLine
                 + Environment.NewLine;
